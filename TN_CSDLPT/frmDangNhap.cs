@@ -72,8 +72,19 @@ namespace TN_CSDLPT
                 return;
             }
 
-            Program.mLogin = edtTenDangNhap.Text;
-            Program.password = edtMatKhau.Text;
+            if (rbSinhVien.Checked)
+            {
+                Program.mLogin = Program.mLoginSV;
+                Program.password = Program.passwordSV;
+                Program.maSV = edtTenDangNhap.Text;
+
+            }
+            else 
+            { 
+                Program.mLogin = edtTenDangNhap.Text;
+                Program.password = edtMatKhau.Text;
+            }
+            
             if (Program.ketNoi() == 0) return;
 
             Program.mCoso = cmbCoSo.SelectedIndex;
@@ -81,7 +92,7 @@ namespace TN_CSDLPT
             Program.passwordDN = Program.password;
             string strLenh = "";
             if (rbSinhVien.Checked)
-                strLenh = "EXEC SP_DangNhapSinhVien '" + Program.maSV + "'" + edtMatKhau.Text;
+                strLenh = "EXEC SP_DangNhapSinhVien '" + Program.maSV + "','" + edtMatKhau.Text + "'";
             else strLenh = "EXEC SP_DangNhapGiangVien '" + Program.mLogin + "'";
 
 
