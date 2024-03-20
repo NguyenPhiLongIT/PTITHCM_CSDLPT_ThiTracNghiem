@@ -35,5 +35,17 @@ namespace TN_CSDLPT
                 f.Show();
             }
         }
+
+        private void btnMonHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGiaoVien f = new frmGiaoVien();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

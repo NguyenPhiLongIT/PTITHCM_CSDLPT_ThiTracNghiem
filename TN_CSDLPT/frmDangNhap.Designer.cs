@@ -60,7 +60,7 @@
             this.btnDangNhap.Location = new System.Drawing.Point(254, 343);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(71, 22);
+            this.btnDangNhap.Size = new System.Drawing.Size(91, 22);
             this.btnDangNhap.TabIndex = 26;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
