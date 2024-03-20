@@ -25,11 +25,11 @@ namespace TN_CSDLPT
         public static String mLogin = "";
         public static String password = "";
         public static String mLoginSV = "SV";
-        public static String passwordSV = "sa";
+        public static String passwordSV = "SV";
         public static String maSV = "";
 
         public static String database = "TN_CSDLPT";
-        public static String remoteLogin = "HTKN";
+        public static String remoteLogin = "sa";
         public static String remoteLoginPassword = "sa";
         public static String mLoginDN = "";
         public static String passwordDN = "";
