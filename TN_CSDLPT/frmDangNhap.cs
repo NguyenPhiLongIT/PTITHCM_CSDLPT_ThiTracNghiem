@@ -81,7 +81,7 @@ namespace TN_CSDLPT
             Program.passwordDN = Program.password;
             string strLenh = "";
             if (rbSinhVien.Checked)
-                strLenh = "EXEC SP_DangNhapSinhVien '" + Program.maSV + "'" + edtMatKhau.Text;
+                strLenh = "EXEC SP_DangNhapSinhVien '" + Program.mLoginSV + "'" + edtMatKhau.Text;
             else strLenh = "EXEC SP_DangNhapGiangVien '" + Program.mLogin + "'";
 
 
