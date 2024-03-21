@@ -122,20 +122,17 @@ namespace TN_CSDLPT
 
             if (rbSinhVien.Checked)
             {
-                //this.Hide();
                 Program.frmMainSinhVien = new frmMainSinhVien();
                 Program.frmMainSinhVien.Activate();
                 Program.frmMainSinhVien.MASO.Text = "Mã SV: " + Program.maSV;
-                Program.frmMainSinhVien.HOTEN.Text = "Mã SV: " + Program.mHoten;
+                Program.frmMainSinhVien.HOTEN.Text = "Họ tên: " + Program.mHoten;
                 Program.frmMainSinhVien.NHOM.Text = "Nhóm: " + Program.mGroup;
                 Program.frmMainSinhVien.ShowDialog();
-                //this.Close();
             }
             else
             {
-                //this.Hide();
                 Program.frmChinh = new frmMain();
-                Program.frmChinh.MASO.Text = "Mã số: " + Program.userName;
+                Program.frmChinh.MASO.Text = "Mã số GV: " + Program.userName;
                 Program.frmChinh.HOTEN.Text = "Họ tên: " + Program.mHoten;
                 Program.frmChinh.NHOM.Text = "Nhóm: " + Program.mGroup;
 
@@ -146,7 +143,6 @@ namespace TN_CSDLPT
                 //Program.frmChinh.pageNhapXuat.Visible = true;
 
                 Program.frmChinh.ShowDialog();
-                //this.Close();
             }
             Close();
         }
