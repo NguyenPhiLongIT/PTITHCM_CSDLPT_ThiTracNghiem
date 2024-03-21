@@ -43,6 +43,11 @@ namespace TN_CSDLPT
 
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
             frmGiaoVien f = new frmGiaoVien();
             f.MdiParent = this;
             f.Show();

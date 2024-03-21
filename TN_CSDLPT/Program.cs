@@ -17,7 +17,7 @@ namespace TN_CSDLPT
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source=DESKTOP-SVEFPRH\\MSSQLSERVER_TN;Initial Catalog=TN_CSDLPT; Integrated Security=True;User ID=sa;Password=sa";
+        public static String connstr_publisher = "Data Source=MSI;Initial Catalog=TN_CSDLPT; Integrated Security=True;User ID=sa;Password=kc";
 
         public static SqlDataReader myReader;
         public static String serverName = "";
@@ -25,7 +25,7 @@ namespace TN_CSDLPT
         public static String mLogin = "";
         public static String password = "";
         public static String mLoginSV = "SV";
-        public static String passwordSV = "SV";
+        public static String passwordSV = "kc";
         public static String maSV = "";
 
         public static String database = "TN_CSDLPT";
