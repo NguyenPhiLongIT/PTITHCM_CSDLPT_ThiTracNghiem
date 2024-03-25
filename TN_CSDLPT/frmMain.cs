@@ -46,11 +46,40 @@ namespace TN_CSDLPT
             
         }
 
-        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnGiaoVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmGiaoVien f = new frmGiaoVien();
-            f.MdiParent = this;
-            f.Show();
+            Form frm = this.CheckExists(typeof(frmGiaoVien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmGiaoVien f = new frmGiaoVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmSinhVien));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmSinhVien f = new frmSinhVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnKhoaLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmKhoa));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmKhoa f = new frmKhoa();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }

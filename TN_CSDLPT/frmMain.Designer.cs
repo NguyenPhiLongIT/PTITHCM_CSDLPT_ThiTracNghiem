@@ -42,7 +42,8 @@
             this.btnChuanBiThi = new DevExpress.XtraBars.BarButtonItem();
             this.btnGVDK = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaoTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGV = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGiaoVien = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSinhVien = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,17 +78,18 @@
             this.btnChuanBiThi,
             this.btnGVDK,
             this.btnTaoTaiKhoan,
-            this.btnGV});
+            this.btnGiaoVien,
+            this.btnSinhVien});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl1.MaxItemId = 21;
+            this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 440;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.pageBaoCao});
-            this.ribbonControl1.Size = new System.Drawing.Size(1019, 193);
+            this.ribbonControl1.Size = new System.Drawing.Size(1019, 158);
             // 
             // barButtonItem1
             // 
@@ -137,6 +139,7 @@
             this.btnKhoaLop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKhoaLop.ImageOptions.Image")));
             this.btnKhoaLop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKhoaLop.ImageOptions.LargeImage")));
             this.btnKhoaLop.Name = "btnKhoaLop";
+            this.btnKhoaLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhoaLop_ItemClick);
             // 
             // btnMonHoc
             // 
@@ -179,12 +182,23 @@
             this.btnTaoTaiKhoan.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoTaiKhoan.ImageOptions.LargeImage")));
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             // 
-            // btnGV
+            // btnGiaoVien
             // 
-            this.btnGV.Caption = "Giáo Viên";
-            this.btnGV.Id = 20;
-            this.btnGV.Name = "btnGV";
-            this.btnGV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            this.btnGiaoVien.Caption = "Giáo Viên";
+            this.btnGiaoVien.Id = 20;
+            this.btnGiaoVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGV.ImageOptions.Image")));
+            this.btnGiaoVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGV.ImageOptions.LargeImage")));
+            this.btnGiaoVien.Name = "btnGiaoVien";
+            this.btnGiaoVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGiaoVien_ItemClick);
+            // 
+            // btnSinhVien
+            // 
+            this.btnSinhVien.Caption = "Sinh Viên";
+            this.btnSinhVien.Id = 21;
+            this.btnSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSV.ImageOptions.Image")));
+            this.btnSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSV.ImageOptions.LargeImage")));
+            this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSinhVien_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -214,7 +228,8 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnNhapDe);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnChuanBiThi);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnGVDK);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnGV);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnGiaoVien);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnSinhVien);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Tổ Chức";
             // 
@@ -241,34 +256,34 @@
             this.MASO,
             this.HOTEN,
             this.NHOM});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 497);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 501);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1019, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1019, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // MASO
             // 
             this.MASO.Name = "MASO";
-            this.MASO.Size = new System.Drawing.Size(51, 20);
+            this.MASO.Size = new System.Drawing.Size(41, 17);
             this.MASO.Text = "MASO";
             // 
             // HOTEN
             // 
             this.HOTEN.Name = "HOTEN";
-            this.HOTEN.Size = new System.Drawing.Size(57, 20);
+            this.HOTEN.Size = new System.Drawing.Size(45, 17);
             this.HOTEN.Text = "HOTEN";
             // 
             // NHOM
             // 
             this.NHOM.Name = "NHOM";
-            this.NHOM.Size = new System.Drawing.Size(55, 20);
+            this.NHOM.Size = new System.Drawing.Size(45, 17);
             this.NHOM.Text = "NHOM";
             // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1019, 523);
             this.Controls.Add(this.statusStrip1);
@@ -314,7 +329,8 @@
         public System.Windows.Forms.ToolStripStatusLabel HOTEN;
         public System.Windows.Forms.ToolStripStatusLabel NHOM;
         private DevExpress.XtraBars.BarButtonItem btnTaoTaiKhoan;
-        private DevExpress.XtraBars.BarButtonItem btnGV;
+        private DevExpress.XtraBars.BarButtonItem btnGiaoVien;
+        private DevExpress.XtraBars.BarButtonItem btnSinhVien;
     }
 }
 

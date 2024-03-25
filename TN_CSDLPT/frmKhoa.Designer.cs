@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoa));
-            System.Windows.Forms.Label mAKHLabel;
-            System.Windows.Forms.Label tENKHLabel;
-            System.Windows.Forms.Label mACSLabel;
             System.Windows.Forms.Label mALOPLabel;
             System.Windows.Forms.Label tENLOPLabel;
             System.Windows.Forms.Label mAKHLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoa));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -53,51 +50,71 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCoSo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tN_CSDLPTDataSet = new TN_CSDLPT.TN_CSDLPTDataSet();
-            this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lOPTableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.LOPTableAdapter();
+            this.TN_CSDLPTDataSet = new TN_CSDLPT.TN_CSDLPTDataSet();
+            this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
+            this.LOPTableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.LOPTableAdapter();
             this.tableAdapterManager = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.TableAdapterManager();
+            this.KHOATableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.KHOATableAdapter();
             this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.kHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kHOATableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.KHOATableAdapter();
+            this.mAKHTextBox1 = new System.Windows.Forms.TextBox();
+            this.tENLOPTextBox = new System.Windows.Forms.TextBox();
+            this.mALOPTextBox = new System.Windows.Forms.TextBox();
+            this.lOPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.kHOADataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mAKHTextBox = new System.Windows.Forms.TextBox();
-            this.tENKHTextBox = new System.Windows.Forms.TextBox();
-            this.mACSTextBox = new System.Windows.Forms.TextBox();
-            this.lOPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mALOPTextBox = new System.Windows.Forms.TextBox();
-            this.tENLOPTextBox = new System.Windows.Forms.TextBox();
-            this.mAKHTextBox1 = new System.Windows.Forms.TextBox();
-            mAKHLabel = new System.Windows.Forms.Label();
-            tENKHLabel = new System.Windows.Forms.Label();
-            mACSLabel = new System.Windows.Forms.Label();
             mALOPLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
             mAKHLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tN_CSDLPTDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TN_CSDLPTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOADataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOADataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mALOPLabel
+            // 
+            mALOPLabel.AutoSize = true;
+            mALOPLabel.Location = new System.Drawing.Point(129, 62);
+            mALOPLabel.Name = "mALOPLabel";
+            mALOPLabel.Size = new System.Drawing.Size(42, 13);
+            mALOPLabel.TabIndex = 6;
+            mALOPLabel.Text = "Mã lớp:";
+            // 
+            // tENLOPLabel
+            // 
+            tENLOPLabel.AutoSize = true;
+            tENLOPLabel.Location = new System.Drawing.Point(129, 140);
+            tENLOPLabel.Name = "tENLOPLabel";
+            tENLOPLabel.Size = new System.Drawing.Size(46, 13);
+            tENLOPLabel.TabIndex = 8;
+            tENLOPLabel.Text = "Tên lớp:";
+            // 
+            // mAKHLabel1
+            // 
+            mAKHLabel1.AutoSize = true;
+            mAKHLabel1.Location = new System.Drawing.Point(129, 220);
+            mAKHLabel1.Name = "mAKHLabel1";
+            mAKHLabel1.Size = new System.Drawing.Size(51, 13);
+            mAKHLabel1.TabIndex = 10;
+            mAKHLabel1.Text = "Mã khoa:";
             // 
             // barManager1
             // 
@@ -260,7 +277,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.comboBox1);
+            this.panelControl1.Controls.Add(this.cmbCoSo);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 45);
@@ -268,13 +285,14 @@
             this.panelControl1.Size = new System.Drawing.Size(1254, 53);
             this.panelControl1.TabIndex = 6;
             // 
-            // comboBox1
+            // cmbCoSo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmbCoSo.FormattingEnabled = true;
+            this.cmbCoSo.Location = new System.Drawing.Point(146, 17);
+            this.cmbCoSo.Name = "cmbCoSo";
+            this.cmbCoSo.Size = new System.Drawing.Size(229, 21);
+            this.cmbCoSo.TabIndex = 1;
+            this.cmbCoSo.SelectedIndexChanged += new System.EventHandler(this.cmbCoSo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -285,19 +303,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cơ Sở";
             // 
-            // tN_CSDLPTDataSet
+            // TN_CSDLPTDataSet
             // 
-            this.tN_CSDLPTDataSet.DataSetName = "TN_CSDLPTDataSet";
-            this.tN_CSDLPTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.TN_CSDLPTDataSet.DataSetName = "TN_CSDLPTDataSet";
+            this.TN_CSDLPTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lOPBindingSource
+            // bdsLop
             // 
-            this.lOPBindingSource.DataMember = "LOP";
-            this.lOPBindingSource.DataSource = this.tN_CSDLPTDataSet;
+            this.bdsLop.DataMember = "LOP";
+            this.bdsLop.DataSource = this.TN_CSDLPTDataSet;
             // 
-            // lOPTableAdapter
+            // LOPTableAdapter
             // 
-            this.lOPTableAdapter.ClearBeforeFill = true;
+            this.LOPTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -308,15 +326,19 @@
             this.tableAdapterManager.CTBAITHITableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
-            this.tableAdapterManager.KHOATableAdapter = this.kHOATableAdapter;
-            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
+            this.tableAdapterManager.KHOATableAdapter = this.KHOATableAdapter;
+            this.tableAdapterManager.LOPTableAdapter = this.LOPTableAdapter;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // KHOATableAdapter
+            // 
+            this.KHOATableAdapter.ClearBeforeFill = true;
+            // 
             // lOPGridControl
             // 
-            this.lOPGridControl.DataSource = this.lOPBindingSource;
+            this.lOPGridControl.DataSource = this.bdsLop;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.lOPGridControl.Location = new System.Drawing.Point(0, 98);
             this.lOPGridControl.MainView = this.gridView1;
@@ -365,26 +387,45 @@
             this.panelControl2.Controls.Add(this.tENLOPTextBox);
             this.panelControl2.Controls.Add(mALOPLabel);
             this.panelControl2.Controls.Add(this.mALOPTextBox);
-            this.panelControl2.Controls.Add(mACSLabel);
-            this.panelControl2.Controls.Add(this.mACSTextBox);
-            this.panelControl2.Controls.Add(tENKHLabel);
-            this.panelControl2.Controls.Add(this.tENKHTextBox);
-            this.panelControl2.Controls.Add(mAKHLabel);
-            this.panelControl2.Controls.Add(this.mAKHTextBox);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 240);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(786, 329);
             this.panelControl2.TabIndex = 8;
             // 
-            // kHOABindingSource
+            // mAKHTextBox1
             // 
-            this.kHOABindingSource.DataMember = "KHOA";
-            this.kHOABindingSource.DataSource = this.tN_CSDLPTDataSet;
+            this.mAKHTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "MAKH", true));
+            this.mAKHTextBox1.Location = new System.Drawing.Point(239, 217);
+            this.mAKHTextBox1.Name = "mAKHTextBox1";
+            this.mAKHTextBox1.Size = new System.Drawing.Size(136, 21);
+            this.mAKHTextBox1.TabIndex = 11;
             // 
-            // kHOATableAdapter
+            // tENLOPTextBox
             // 
-            this.kHOATableAdapter.ClearBeforeFill = true;
+            this.tENLOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLop, "TENLOP", true));
+            this.tENLOPTextBox.Location = new System.Drawing.Point(239, 137);
+            this.tENLOPTextBox.Name = "tENLOPTextBox";
+            this.tENLOPTextBox.Size = new System.Drawing.Size(235, 21);
+            this.tENLOPTextBox.TabIndex = 9;
+            // 
+            // mALOPTextBox
+            // 
+            this.mALOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource1, "MALOP", true));
+            this.mALOPTextBox.Location = new System.Drawing.Point(239, 59);
+            this.mALOPTextBox.Name = "mALOPTextBox";
+            this.mALOPTextBox.Size = new System.Drawing.Size(136, 21);
+            this.mALOPTextBox.TabIndex = 7;
+            // 
+            // lOPBindingSource1
+            // 
+            this.lOPBindingSource1.DataMember = "FK_LOP_KHOA";
+            this.lOPBindingSource1.DataSource = this.bdsKhoa;
+            // 
+            // bdsKhoa
+            // 
+            this.bdsKhoa.DataMember = "KHOA";
+            this.bdsKhoa.DataSource = this.TN_CSDLPTDataSet;
             // 
             // kHOADataGridView
             // 
@@ -393,9 +434,8 @@
             this.kHOADataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.kHOADataGridView.DataSource = this.kHOABindingSource;
+            this.dataGridViewTextBoxColumn3});
+            this.kHOADataGridView.DataSource = this.bdsKhoa;
             this.kHOADataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kHOADataGridView.Location = new System.Drawing.Point(786, 240);
             this.kHOADataGridView.Name = "kHOADataGridView";
@@ -420,119 +460,6 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "MACS";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "rowguid";
-            this.dataGridViewTextBoxColumn4.HeaderText = "rowguid";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // mAKHLabel
-            // 
-            mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(41, 61);
-            mAKHLabel.Name = "mAKHLabel";
-            mAKHLabel.Size = new System.Drawing.Size(51, 13);
-            mAKHLabel.TabIndex = 0;
-            mAKHLabel.Text = "Mã khoa:";
-            // 
-            // mAKHTextBox
-            // 
-            this.mAKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MAKH", true));
-            this.mAKHTextBox.Location = new System.Drawing.Point(110, 58);
-            this.mAKHTextBox.Name = "mAKHTextBox";
-            this.mAKHTextBox.Size = new System.Drawing.Size(155, 21);
-            this.mAKHTextBox.TabIndex = 1;
-            // 
-            // tENKHLabel
-            // 
-            tENKHLabel.AutoSize = true;
-            tENKHLabel.Location = new System.Drawing.Point(41, 140);
-            tENKHLabel.Name = "tENKHLabel";
-            tENKHLabel.Size = new System.Drawing.Size(55, 13);
-            tENKHLabel.TabIndex = 2;
-            tENKHLabel.Text = "Tên khoa:";
-            // 
-            // tENKHTextBox
-            // 
-            this.tENKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "TENKH", true));
-            this.tENKHTextBox.Location = new System.Drawing.Point(110, 137);
-            this.tENKHTextBox.Name = "tENKHTextBox";
-            this.tENKHTextBox.Size = new System.Drawing.Size(254, 21);
-            this.tENKHTextBox.TabIndex = 3;
-            // 
-            // mACSLabel
-            // 
-            mACSLabel.AutoSize = true;
-            mACSLabel.Location = new System.Drawing.Point(41, 224);
-            mACSLabel.Name = "mACSLabel";
-            mACSLabel.Size = new System.Drawing.Size(53, 13);
-            mACSLabel.TabIndex = 4;
-            mACSLabel.Text = "Mã cơ sở:";
-            // 
-            // mACSTextBox
-            // 
-            this.mACSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHOABindingSource, "MACS", true));
-            this.mACSTextBox.Location = new System.Drawing.Point(110, 216);
-            this.mACSTextBox.Name = "mACSTextBox";
-            this.mACSTextBox.Size = new System.Drawing.Size(155, 21);
-            this.mACSTextBox.TabIndex = 5;
-            // 
-            // lOPBindingSource1
-            // 
-            this.lOPBindingSource1.DataMember = "FK_LOP_KHOA";
-            this.lOPBindingSource1.DataSource = this.kHOABindingSource;
-            // 
-            // mALOPLabel
-            // 
-            mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(436, 61);
-            mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(42, 13);
-            mALOPLabel.TabIndex = 6;
-            mALOPLabel.Text = "Mã lớp:";
-            // 
-            // mALOPTextBox
-            // 
-            this.mALOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource1, "MALOP", true));
-            this.mALOPTextBox.Location = new System.Drawing.Point(520, 58);
-            this.mALOPTextBox.Name = "mALOPTextBox";
-            this.mALOPTextBox.Size = new System.Drawing.Size(136, 21);
-            this.mALOPTextBox.TabIndex = 7;
-            // 
-            // tENLOPLabel
-            // 
-            tENLOPLabel.AutoSize = true;
-            tENLOPLabel.Location = new System.Drawing.Point(436, 140);
-            tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(46, 13);
-            tENLOPLabel.TabIndex = 8;
-            tENLOPLabel.Text = "Tên lớp:";
-            // 
-            // tENLOPTextBox
-            // 
-            this.tENLOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource, "TENLOP", true));
-            this.tENLOPTextBox.Location = new System.Drawing.Point(520, 137);
-            this.tENLOPTextBox.Name = "tENLOPTextBox";
-            this.tENLOPTextBox.Size = new System.Drawing.Size(235, 21);
-            this.tENLOPTextBox.TabIndex = 9;
-            // 
-            // mAKHLabel1
-            // 
-            mAKHLabel1.AutoSize = true;
-            mAKHLabel1.Location = new System.Drawing.Point(442, 219);
-            mAKHLabel1.Name = "mAKHLabel1";
-            mAKHLabel1.Size = new System.Drawing.Size(51, 13);
-            mAKHLabel1.TabIndex = 10;
-            mAKHLabel1.Text = "Mã khoa:";
-            // 
-            // mAKHTextBox1
-            // 
-            this.mAKHTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPBindingSource, "MAKH", true));
-            this.mAKHTextBox1.Location = new System.Drawing.Point(520, 216);
-            this.mAKHTextBox1.Name = "mAKHTextBox1";
-            this.mAKHTextBox1.Size = new System.Drawing.Size(136, 21);
-            this.mAKHTextBox1.TabIndex = 11;
-            // 
             // frmKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -556,16 +483,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tN_CSDLPTDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TN_CSDLPTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOADataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kHOADataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,11 +517,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCoSo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource lOPBindingSource;
-        private TN_CSDLPTDataSet tN_CSDLPTDataSet;
-        private TN_CSDLPTDataSetTableAdapters.LOPTableAdapter lOPTableAdapter;
+        private System.Windows.Forms.BindingSource bdsLop;
+        private TN_CSDLPTDataSet TN_CSDLPTDataSet;
+        private TN_CSDLPTDataSetTableAdapters.LOPTableAdapter LOPTableAdapter;
         private TN_CSDLPTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl lOPGridControl;
@@ -602,19 +529,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKH;
-        private TN_CSDLPTDataSetTableAdapters.KHOATableAdapter kHOATableAdapter;
-        private System.Windows.Forms.BindingSource kHOABindingSource;
+        private TN_CSDLPTDataSetTableAdapters.KHOATableAdapter KHOATableAdapter;
+        private System.Windows.Forms.BindingSource bdsKhoa;
         private System.Windows.Forms.DataGridView kHOADataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.TextBox mACSTextBox;
-        private System.Windows.Forms.TextBox tENKHTextBox;
-        private System.Windows.Forms.TextBox mAKHTextBox;
         private System.Windows.Forms.TextBox mAKHTextBox1;
         private System.Windows.Forms.TextBox tENLOPTextBox;
         private System.Windows.Forms.TextBox mALOPTextBox;
         private System.Windows.Forms.BindingSource lOPBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

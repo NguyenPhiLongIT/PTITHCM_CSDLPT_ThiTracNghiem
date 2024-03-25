@@ -12,6 +12,7 @@ namespace TN_CSDLPT
 {
     public partial class frmKhoa : Form
     {
+        string macs = "";
         public frmKhoa()
         {
             InitializeComponent();
@@ -20,18 +21,35 @@ namespace TN_CSDLPT
         private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.lOPBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.tN_CSDLPTDataSet);
+            this.bdsLop.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.TN_CSDLPTDataSet);
 
         }
 
         private void frmKhoa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tN_CSDLPTDataSet.KHOA' table. You can move, or remove it, as needed.
-            this.kHOATableAdapter.Fill(this.tN_CSDLPTDataSet.KHOA);
-            // TODO: This line of code loads data into the 'tN_CSDLPTDataSet.LOP' table. You can move, or remove it, as needed.
-            this.lOPTableAdapter.Fill(this.tN_CSDLPTDataSet.LOP);
+            TN_CSDLPTDataSet.EnforceConstraints = false;
+            //macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
+            cmbCoSo.DataSource = Program.bsDanhSachPhanManh;
+            cmbCoSo.DisplayMember = "TENCS";
+            cmbCoSo.ValueMember = "TENSERVER";
 
+            cmbCoSo.SelectedIndex = Program.mCoso;
+
+            this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            this.KHOATableAdapter.Fill(this.TN_CSDLPTDataSet.KHOA);
+            this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.LOPTableAdapter.Fill(this.TN_CSDLPTDataSet.LOP);
+
+        }
+
+        private void cmbCoSo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.serverName = cmbCoSo.SelectedValue.ToString();
+            }
+            catch (Exception) { }
         }
     }
 }

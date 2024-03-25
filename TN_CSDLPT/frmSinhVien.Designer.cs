@@ -54,14 +54,14 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCoSo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TN_CSDLPTDataSet = new TN_CSDLPT.TN_CSDLPTDataSet();
             this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.LOPTableAdapter();
             this.tableAdapterManager = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.TableAdapterManager();
-            this.kHOATableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.KHOATableAdapter();
-            this.sINHVIENTableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.SINHVIENTableAdapter();
+            this.KHOATableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.KHOATableAdapter();
+            this.SINHVIENTableAdapter = new TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.SINHVIENTableAdapter();
             this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,7 +77,7 @@
             this.tENTextBox = new System.Windows.Forms.TextBox();
             this.hOTextBox = new System.Windows.Forms.TextBox();
             this.mASVTextBox = new System.Windows.Forms.TextBox();
-            this.kHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.sINHVIENDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +86,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mALOPLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
             nGAYSINHLabel = new System.Windows.Forms.Label();
@@ -107,7 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYSINHDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYSINHDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +116,7 @@
             mALOPLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mALOPLabel.Location = new System.Drawing.Point(377, 222);
             mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(57, 19);
+            mALOPLabel.Size = new System.Drawing.Size(45, 15);
             mALOPLabel.TabIndex = 34;
             mALOPLabel.Text = "Mã lớp";
             // 
@@ -127,7 +126,7 @@
             dIACHILabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dIACHILabel.Location = new System.Drawing.Point(26, 166);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(63, 19);
+            dIACHILabel.Size = new System.Drawing.Size(47, 15);
             dIACHILabel.TabIndex = 32;
             dIACHILabel.Text = "Địa chỉ:";
             // 
@@ -137,7 +136,7 @@
             nGAYSINHLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nGAYSINHLabel.Location = new System.Drawing.Point(360, 68);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(81, 19);
+            nGAYSINHLabel.Size = new System.Drawing.Size(65, 15);
             nGAYSINHLabel.TabIndex = 30;
             nGAYSINHLabel.Text = "Ngày sinh:";
             // 
@@ -147,7 +146,7 @@
             tENLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tENLabel.Location = new System.Drawing.Point(363, 111);
             tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(39, 19);
+            tENLabel.Size = new System.Drawing.Size(31, 15);
             tENLabel.TabIndex = 28;
             tENLabel.Text = "Tên:";
             // 
@@ -157,7 +156,7 @@
             hOLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             hOLabel.Location = new System.Drawing.Point(28, 111);
             hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(35, 19);
+            hOLabel.Size = new System.Drawing.Size(26, 15);
             hOLabel.TabIndex = 26;
             hOLabel.Text = "Họ:";
             // 
@@ -167,7 +166,7 @@
             mASVLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             mASVLabel.Location = new System.Drawing.Point(28, 68);
             mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(100, 19);
+            mASVLabel.Size = new System.Drawing.Size(80, 15);
             mASVLabel.TabIndex = 24;
             mASVLabel.Text = "Mã sinh viên:";
             // 
@@ -177,7 +176,7 @@
             tENLOPLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tENLOPLabel.Location = new System.Drawing.Point(28, 218);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(65, 19);
+            tENLOPLabel.Size = new System.Drawing.Size(51, 15);
             tENLOPLabel.TabIndex = 35;
             tENLOPLabel.Text = "Tên lớp:";
             // 
@@ -314,7 +313,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1316, 51);
+            this.barDockControlTop.Size = new System.Drawing.Size(1604, 45);
             // 
             // barDockControlBottom
             // 
@@ -322,48 +321,49 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 582);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1316, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1604, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 531);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 537);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1316, 51);
+            this.barDockControlRight.Location = new System.Drawing.Point(1604, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 531);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 537);
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.comboBox1);
+            this.panelControl1.Controls.Add(this.cmbCoSo);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 51);
+            this.panelControl1.Location = new System.Drawing.Point(0, 45);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1316, 53);
+            this.panelControl1.Size = new System.Drawing.Size(1604, 53);
             this.panelControl1.TabIndex = 5;
             // 
-            // comboBox1
+            // cmbCoSo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cmbCoSo.FormattingEnabled = true;
+            this.cmbCoSo.Location = new System.Drawing.Point(146, 17);
+            this.cmbCoSo.Name = "cmbCoSo";
+            this.cmbCoSo.Size = new System.Drawing.Size(229, 21);
+            this.cmbCoSo.TabIndex = 1;
+            this.cmbCoSo.SelectedIndexChanged += new System.EventHandler(this.cmbCoSo_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(93, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cơ Sở";
             // 
@@ -390,29 +390,29 @@
             this.tableAdapterManager.CTBAITHITableAdapter = null;
             this.tableAdapterManager.GIAOVIEN_DANGKYTableAdapter = null;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
-            this.tableAdapterManager.KHOATableAdapter = this.kHOATableAdapter;
+            this.tableAdapterManager.KHOATableAdapter = this.KHOATableAdapter;
             this.tableAdapterManager.LOPTableAdapter = this.LOPTableAdapter;
             this.tableAdapterManager.MONHOCTableAdapter = null;
-            this.tableAdapterManager.SINHVIENTableAdapter = this.sINHVIENTableAdapter;
+            this.tableAdapterManager.SINHVIENTableAdapter = this.SINHVIENTableAdapter;
             this.tableAdapterManager.UpdateOrder = TN_CSDLPT.TN_CSDLPTDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // kHOATableAdapter
+            // KHOATableAdapter
             // 
-            this.kHOATableAdapter.ClearBeforeFill = true;
+            this.KHOATableAdapter.ClearBeforeFill = true;
             // 
-            // sINHVIENTableAdapter
+            // SINHVIENTableAdapter
             // 
-            this.sINHVIENTableAdapter.ClearBeforeFill = true;
+            this.SINHVIENTableAdapter.ClearBeforeFill = true;
             // 
             // lOPGridControl
             // 
             this.lOPGridControl.DataSource = this.bdsLop;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 104);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 98);
             this.lOPGridControl.MainView = this.gridView1;
             this.lOPGridControl.MenuManager = this.barManager1;
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(1316, 156);
+            this.lOPGridControl.Size = new System.Drawing.Size(1604, 156);
             this.lOPGridControl.TabIndex = 6;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -464,9 +464,9 @@
             this.panelControl2.Controls.Add(mASVLabel);
             this.panelControl2.Controls.Add(this.mASVTextBox);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl2.Location = new System.Drawing.Point(0, 260);
+            this.panelControl2.Location = new System.Drawing.Point(0, 254);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(646, 322);
+            this.panelControl2.Size = new System.Drawing.Size(646, 328);
             this.panelControl2.TabIndex = 7;
             // 
             // tenLopComboBox
@@ -479,7 +479,7 @@
             this.tenLopComboBox.FormattingEnabled = true;
             this.tenLopComboBox.Location = new System.Drawing.Point(129, 215);
             this.tenLopComboBox.Name = "tenLopComboBox";
-            this.tenLopComboBox.Size = new System.Drawing.Size(121, 27);
+            this.tenLopComboBox.Size = new System.Drawing.Size(121, 23);
             this.tenLopComboBox.TabIndex = 36;
             this.tenLopComboBox.ValueMember = "MALOP";
             // 
@@ -494,7 +494,7 @@
             this.txtMaLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLop.Location = new System.Drawing.Point(428, 219);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(184, 26);
+            this.txtMaLop.Size = new System.Drawing.Size(184, 22);
             this.txtMaLop.TabIndex = 35;
             // 
             // dIACHITextBox
@@ -503,7 +503,7 @@
             this.dIACHITextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dIACHITextBox.Location = new System.Drawing.Point(129, 163);
             this.dIACHITextBox.Name = "dIACHITextBox";
-            this.dIACHITextBox.Size = new System.Drawing.Size(483, 26);
+            this.dIACHITextBox.Size = new System.Drawing.Size(483, 22);
             this.dIACHITextBox.TabIndex = 33;
             // 
             // sINHVIENBindingSource
@@ -524,7 +524,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.nGAYSINHDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.nGAYSINHDateEdit.Size = new System.Drawing.Size(184, 26);
+            this.nGAYSINHDateEdit.Size = new System.Drawing.Size(184, 22);
             this.nGAYSINHDateEdit.TabIndex = 31;
             // 
             // tENTextBox
@@ -533,7 +533,7 @@
             this.tENTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tENTextBox.Location = new System.Drawing.Point(428, 108);
             this.tENTextBox.Name = "tENTextBox";
-            this.tENTextBox.Size = new System.Drawing.Size(184, 26);
+            this.tENTextBox.Size = new System.Drawing.Size(184, 22);
             this.tENTextBox.TabIndex = 29;
             // 
             // hOTextBox
@@ -542,7 +542,7 @@
             this.hOTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hOTextBox.Location = new System.Drawing.Point(129, 108);
             this.hOTextBox.Name = "hOTextBox";
-            this.hOTextBox.Size = new System.Drawing.Size(180, 26);
+            this.hOTextBox.Size = new System.Drawing.Size(180, 22);
             this.hOTextBox.TabIndex = 27;
             // 
             // mASVTextBox
@@ -551,13 +551,13 @@
             this.mASVTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mASVTextBox.Location = new System.Drawing.Point(129, 65);
             this.mASVTextBox.Name = "mASVTextBox";
-            this.mASVTextBox.Size = new System.Drawing.Size(119, 26);
+            this.mASVTextBox.Size = new System.Drawing.Size(119, 22);
             this.mASVTextBox.TabIndex = 25;
             // 
-            // kHOABindingSource
+            // bdsKhoa
             // 
-            this.kHOABindingSource.DataMember = "KHOA";
-            this.kHOABindingSource.DataSource = this.TN_CSDLPTDataSet;
+            this.bdsKhoa.DataMember = "KHOA";
+            this.bdsKhoa.DataSource = this.TN_CSDLPTDataSet;
             // 
             // sINHVIENDataGridView
             // 
@@ -570,14 +570,13 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.dataGridViewTextBoxColumn7});
             this.sINHVIENDataGridView.DataSource = this.bdsSV;
             this.sINHVIENDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sINHVIENDataGridView.Location = new System.Drawing.Point(646, 260);
+            this.sINHVIENDataGridView.Location = new System.Drawing.Point(646, 254);
             this.sINHVIENDataGridView.Name = "sINHVIENDataGridView";
             this.sINHVIENDataGridView.RowHeadersWidth = 51;
-            this.sINHVIENDataGridView.Size = new System.Drawing.Size(670, 322);
+            this.sINHVIENDataGridView.Size = new System.Drawing.Size(958, 328);
             this.sINHVIENDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -637,19 +636,11 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "rowguid";
-            this.dataGridViewTextBoxColumn8.HeaderText = "rowguid";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
             // frmSinhVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 602);
+            this.ClientSize = new System.Drawing.Size(1604, 602);
             this.Controls.Add(this.sINHVIENDataGridView);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.lOPGridControl);
@@ -679,7 +670,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYSINHDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nGAYSINHDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -707,7 +698,7 @@
         private System.Windows.Forms.BindingSource bdsLop;
         private TN_CSDLPTDataSet TN_CSDLPTDataSet;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCoSo;
         private System.Windows.Forms.Label label1;
         private TN_CSDLPTDataSetTableAdapters.LOPTableAdapter LOPTableAdapter;
         private TN_CSDLPTDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -717,7 +708,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKH;
-        private TN_CSDLPTDataSetTableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
+        private TN_CSDLPTDataSetTableAdapters.SINHVIENTableAdapter SINHVIENTableAdapter;
         private System.Windows.Forms.BindingSource sINHVIENBindingSource;
         private System.Windows.Forms.DataGridView sINHVIENDataGridView;
         private System.Windows.Forms.BindingSource bdsSV;
@@ -727,8 +718,8 @@
         private System.Windows.Forms.TextBox tENTextBox;
         private System.Windows.Forms.TextBox hOTextBox;
         private System.Windows.Forms.TextBox mASVTextBox;
-        private TN_CSDLPTDataSetTableAdapters.KHOATableAdapter kHOATableAdapter;
-        private System.Windows.Forms.BindingSource kHOABindingSource;
+        private TN_CSDLPTDataSetTableAdapters.KHOATableAdapter KHOATableAdapter;
+        private System.Windows.Forms.BindingSource bdsKhoa;
         private System.Windows.Forms.ComboBox tenLopComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -737,6 +728,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
