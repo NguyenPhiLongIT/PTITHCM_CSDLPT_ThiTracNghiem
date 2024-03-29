@@ -22,13 +22,13 @@ namespace TN_CSDLPT
         {
             this.Validate();
             this.bdsLop.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.TN_CSDLPTDataSet);
+            this.tableAdapterManager.UpdateAll(this.DS);
 
         }
 
         private void frmKhoa_Load(object sender, EventArgs e)
         {
-            TN_CSDLPTDataSet.EnforceConstraints = false;
+            DS.EnforceConstraints = false;
             //macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
             cmbCoSo.DataSource = Program.bsDanhSachPhanManh;
             cmbCoSo.DisplayMember = "TENCS";
@@ -37,9 +37,9 @@ namespace TN_CSDLPT
             cmbCoSo.SelectedIndex = Program.mCoso;
 
             this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
-            this.KHOATableAdapter.Fill(this.TN_CSDLPTDataSet.KHOA);
+            this.KHOATableAdapter.Fill(this.DS.KHOA);
             this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.LOPTableAdapter.Fill(this.TN_CSDLPTDataSet.LOP);
+            this.LOPTableAdapter.Fill(this.DS.LOP);
 
         }
 

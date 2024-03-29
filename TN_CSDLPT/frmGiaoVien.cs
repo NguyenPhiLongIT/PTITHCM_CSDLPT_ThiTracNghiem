@@ -23,31 +23,30 @@ namespace TN_CSDLPT
         {
             this.Validate();
             this.bdsGV.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.TN_CSDLPTDataSet);
+            this.tableAdapterManager.UpdateAll(this.DS);
 
         }
 
         private void frmGiaoVien_Load(object sender, EventArgs e)
         {
-
-            TN_CSDLPTDataSet.EnforceConstraints = false; //khong bat buoc kiem tra dieu kien khoa ngoai
+            DS.EnforceConstraints = false; //khong bat buoc kiem tra dieu kien khoa ngoai
 
             // TODO: This line of code loads data into the 'tN_CSDLPTDataSet.GIAOVIEN' table. You can move, or remove it, as needed.
             this.GIAOVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.GIAOVIENTableAdapter.Fill(this.TN_CSDLPTDataSet.GIAOVIEN);
+            this.GIAOVIENTableAdapter.Fill(this.DS.GIAOVIEN);
 
             // TODO: This line of code loads data into the 'TN_CSDLPTDataSet.GIAOVIEN_DANGKY' table. You can move, or remove it, as needed.
-            this.gIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.gIAOVIEN_DANGKYTableAdapter.Fill(this.TN_CSDLPTDataSet.GIAOVIEN_DANGKY);
+            this.GIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.GIAOVIEN_DANGKYTableAdapter.Fill(this.DS.GIAOVIEN_DANGKY);
             // TODO: This line of code loads data into the 'TN_CSDLPTDataSet.BODE' table. You can move, or remove it, as needed.
-            this.bODETableAdapter.Connection.ConnectionString = Program.connstr;
-            this.bODETableAdapter.Fill(this.TN_CSDLPTDataSet.BODE);
+            this.BODETableAdapter.Connection.ConnectionString = Program.connstr;
+            this.BODETableAdapter.Fill(this.DS.BODE);
             // TODO: This line of code loads data into the 'TN_CSDLPTDataSet.KHOA' table. You can move, or remove it, as needed.
-            this.kHOATableAdapter.Connection.ConnectionString = Program.connstr;
-            this.kHOATableAdapter.Fill(this.TN_CSDLPTDataSet.KHOA);
+            this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            this.KHOATableAdapter.Fill(this.DS.KHOA);
             // TODO: This line of code loads data into the 'TN_CSDLPTDataSet.DSKHOA' table. You can move, or remove it, as needed.
-            this.dSKHOATableAdapter.Connection.ConnectionString = Program.connstr;
-            this.dSKHOATableAdapter.Fill(this.TN_CSDLPTDataSet.DSKHOA);
+            //this.dSKHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            //this.dSKHOATableAdapter.Fill(this.DS.DSKHOA);
 
             macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
             cmbCoSo.DataSource = Program.bsDanhSachPhanManh;
@@ -57,6 +56,7 @@ namespace TN_CSDLPT
             if (Program.mGroup == "TRUONG")
             {
                 cmbCoSo.Enabled = true; //Bat tat cho phep chuyen co so
+                btnThem.Enabled = btnXoa.Enabled = btnHieuChinh.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = false;
             }
             else
             {
@@ -70,12 +70,62 @@ namespace TN_CSDLPT
 
         }
 
-        private void tENKHComboBox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void cmbCoSo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbCoSo.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
+
+            Program.serverName = cmbCoSo.SelectedValue.ToString();
+            Console.WriteLine(Program.mCoso);
+
+            if (cmbCoSo.SelectedIndex != Program.mCoso)
+            {
+                Program.mLogin = Program.remoteLogin;
+                Program.password = Program.remoteLoginPassword;
+            }
+            else
+            {
+                Program.mLogin = Program.mLoginDN;
+                Program.password = Program.passwordDN;
+            }
+
+
+
+            if (Program.ketNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối vào cơ sở mới", "", MessageBoxButtons.OK);
+            }
+
+            else
+            {
+                this.GIAOVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.GIAOVIENTableAdapter.Fill(this.DS.GIAOVIEN);
+
+                this.BODETableAdapter.Connection.ConnectionString = Program.connstr;
+                this.BODETableAdapter.Fill(this.DS.BODE);
+
+                this.GIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.GIAOVIEN_DANGKYTableAdapter.Fill(this.DS.GIAOVIEN_DANGKY);
+
+                this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
+                this.KHOATableAdapter.Fill(this.DS.KHOA);
+
+                //this.dSKHOATableAdapter.Connection.ConnectionString = Program.connstr;
+                //this.dSKHOATableAdapter.Fill(this.DS.DSKHOA);
+
+
+                macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
+            }
+        }
+
+        private void cmbDSKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 txtMAKH.Text = cmbDSKhoa.SelectedValue.ToString();
-            } catch (Exception ex) { }
+            }
+            catch (Exception ex) { }
         }
     }
 }

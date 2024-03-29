@@ -68,6 +68,14 @@ namespace TN_CSDLPT
                 f.MdiParent = this;
                 f.Show();
             }
+            //Form frm = this.CheckExists(typeof(test));
+            //if (frm != null) frm.Activate();
+            //else
+            //{
+            //    test f = new test();
+            //    f.MdiParent = this;
+            //    f.Show();
+            //}
         }
 
         private void btnKhoaLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
