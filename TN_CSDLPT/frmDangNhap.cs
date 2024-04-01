@@ -124,23 +124,17 @@ namespace TN_CSDLPT
             {
                 Program.frmMainSinhVien = new frmMainSinhVien();
                 Program.frmMainSinhVien.Activate();
-                Program.frmMainSinhVien.MASO.Text = "Mã SV: " + Program.maSV;
-                Program.frmMainSinhVien.HOTEN.Text = "Họ tên: " + Program.mHoten;
-                Program.frmMainSinhVien.NHOM.Text = "Nhóm: " + Program.mGroup;
+                Program.frmMainSinhVien.MASO.Text = "MÃ SV: " + Program.maSV;
+                Program.frmMainSinhVien.HOTEN.Text = "HỌ TÊN: " + Program.mHoten;
+                Program.frmMainSinhVien.NHOM.Text = "NHÓM: " + Program.mGroup;
                 Program.frmMainSinhVien.ShowDialog();
             }
             else
             {
                 Program.frmChinh = new frmMain();
-                Program.frmChinh.MASO.Text = "Mã số GV: " + Program.userName;
-                Program.frmChinh.HOTEN.Text = "Họ tên: " + Program.mHoten;
-                Program.frmChinh.NHOM.Text = "Nhóm: " + Program.mGroup;
-
-                //Program.frmChinh.btnDangNhap.Enabled = false;
-                //Program.frmChinh.btnTaoTaiKhoan.Enabled = true;
-                //Program.frmChinh.btnDangXuat.Enabled = true;
-                //Program.frmChinh.pageBaoCao.Visible = true;
-                //Program.frmChinh.pageNhapXuat.Visible = true;
+                Program.frmChinh.MASO.Text = "MÃ GV: " + Program.userName;
+                Program.frmChinh.HOTEN.Text = "HỌ TÊN: " + Program.mHoten;
+                Program.frmChinh.NHOM.Text = "NHÓM: " + Program.mGroup;
 
                 Program.frmChinh.ShowDialog();
             }

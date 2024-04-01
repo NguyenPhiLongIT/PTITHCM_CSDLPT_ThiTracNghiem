@@ -73,6 +73,7 @@
             this.edtMatKhau.Name = "edtMatKhau";
             this.edtMatKhau.Size = new System.Drawing.Size(325, 22);
             this.edtMatKhau.TabIndex = 25;
+            this.edtMatKhau.UseSystemPasswordChar = true;
             // 
             // edtTenDangNhap
             // 

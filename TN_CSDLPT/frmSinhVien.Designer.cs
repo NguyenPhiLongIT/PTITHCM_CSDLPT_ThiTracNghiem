@@ -37,6 +37,7 @@
             System.Windows.Forms.Label tENLOPLabel;
             System.Windows.Forms.Label hOLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
+            System.Windows.Forms.Label mALOPLabel;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbCoSo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,8 +53,8 @@
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.tENLOPTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.tENKHTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenLop = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenKhoa = new DevExpress.XtraEditors.TextEdit();
             this.bdsKhoa = new System.Windows.Forms.BindingSource(this.components);
             this.txtDiaChiSV = new System.Windows.Forms.TextBox();
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
@@ -89,6 +90,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
             dIACHILabel = new System.Windows.Forms.Label();
             nGAYSINHLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -96,6 +98,7 @@
             tENKHLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
+            mALOPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
@@ -105,8 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tENLOPTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tENKHTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
@@ -114,13 +117,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsGVDK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsBangDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
             dIACHILabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dIACHILabel.Location = new System.Drawing.Point(66, 176);
+            dIACHILabel.Location = new System.Drawing.Point(66, 149);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(47, 15);
             dIACHILabel.TabIndex = 59;
@@ -130,7 +134,7 @@
             // 
             nGAYSINHLabel.AutoSize = true;
             nGAYSINHLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nGAYSINHLabel.Location = new System.Drawing.Point(400, 78);
+            nGAYSINHLabel.Location = new System.Drawing.Point(400, 51);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
             nGAYSINHLabel.Size = new System.Drawing.Size(65, 15);
             nGAYSINHLabel.TabIndex = 57;
@@ -140,7 +144,7 @@
             // 
             tENLabel.AutoSize = true;
             tENLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENLabel.Location = new System.Drawing.Point(403, 121);
+            tENLabel.Location = new System.Drawing.Point(403, 94);
             tENLabel.Name = "tENLabel";
             tENLabel.Size = new System.Drawing.Size(31, 15);
             tENLabel.TabIndex = 55;
@@ -150,7 +154,7 @@
             // 
             mASVLabel.AutoSize = true;
             mASVLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mASVLabel.Location = new System.Drawing.Point(68, 78);
+            mASVLabel.Location = new System.Drawing.Point(68, 51);
             mASVLabel.Name = "mASVLabel";
             mASVLabel.Size = new System.Drawing.Size(80, 15);
             mASVLabel.TabIndex = 51;
@@ -160,7 +164,7 @@
             // 
             tENKHLabel.AutoSize = true;
             tENKHLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENKHLabel.Location = new System.Drawing.Point(66, 230);
+            tENKHLabel.Location = new System.Drawing.Point(66, 256);
             tENKHLabel.Name = "tENKHLabel";
             tENKHLabel.Size = new System.Drawing.Size(60, 15);
             tENKHLabel.TabIndex = 62;
@@ -170,7 +174,7 @@
             // 
             tENLOPLabel.AutoSize = true;
             tENLOPLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENLOPLabel.Location = new System.Drawing.Point(403, 230);
+            tENLOPLabel.Location = new System.Drawing.Point(403, 203);
             tENLOPLabel.Name = "tENLOPLabel";
             tENLOPLabel.Size = new System.Drawing.Size(51, 15);
             tENLOPLabel.TabIndex = 63;
@@ -180,7 +184,7 @@
             // 
             hOLabel.AutoSize = true;
             hOLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            hOLabel.Location = new System.Drawing.Point(68, 122);
+            hOLabel.Location = new System.Drawing.Point(68, 95);
             hOLabel.Name = "hOLabel";
             hOLabel.Size = new System.Drawing.Size(26, 15);
             hOLabel.TabIndex = 64;
@@ -296,11 +300,13 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(mALOPLabel);
+            this.panelControl2.Controls.Add(this.txtMaLop);
             this.panelControl2.Controls.Add(hOLabel);
             this.panelControl2.Controls.Add(tENLOPLabel);
-            this.panelControl2.Controls.Add(this.tENLOPTextEdit);
+            this.panelControl2.Controls.Add(this.txtTenLop);
             this.panelControl2.Controls.Add(tENKHLabel);
-            this.panelControl2.Controls.Add(this.tENKHTextEdit);
+            this.panelControl2.Controls.Add(this.txtTenKhoa);
             this.panelControl2.Controls.Add(dIACHILabel);
             this.panelControl2.Controls.Add(this.txtDiaChiSV);
             this.panelControl2.Controls.Add(nGAYSINHLabel);
@@ -316,25 +322,25 @@
             this.panelControl2.Size = new System.Drawing.Size(779, 543);
             this.panelControl2.TabIndex = 41;
             // 
-            // tENLOPTextEdit
+            // txtTenLop
             // 
-            this.tENLOPTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "TENLOP", true));
-            this.tENLOPTextEdit.Location = new System.Drawing.Point(468, 227);
-            this.tENLOPTextEdit.Name = "tENLOPTextEdit";
-            this.tENLOPTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tENLOPTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENLOPTextEdit.Size = new System.Drawing.Size(184, 22);
-            this.tENLOPTextEdit.TabIndex = 64;
+            this.txtTenLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "TENLOP", true));
+            this.txtTenLop.Location = new System.Drawing.Point(468, 200);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLop.Properties.Appearance.Options.UseFont = true;
+            this.txtTenLop.Size = new System.Drawing.Size(184, 22);
+            this.txtTenLop.TabIndex = 64;
             // 
-            // tENKHTextEdit
+            // txtTenKhoa
             // 
-            this.tENKHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKhoa, "TENKH", true));
-            this.tENKHTextEdit.Location = new System.Drawing.Point(169, 227);
-            this.tENKHTextEdit.Name = "tENKHTextEdit";
-            this.tENKHTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tENKHTextEdit.Properties.Appearance.Options.UseFont = true;
-            this.tENKHTextEdit.Size = new System.Drawing.Size(180, 22);
-            this.tENKHTextEdit.TabIndex = 63;
+            this.txtTenKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKhoa, "TENKH", true));
+            this.txtTenKhoa.Location = new System.Drawing.Point(169, 253);
+            this.txtTenKhoa.Name = "txtTenKhoa";
+            this.txtTenKhoa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhoa.Properties.Appearance.Options.UseFont = true;
+            this.txtTenKhoa.Size = new System.Drawing.Size(180, 22);
+            this.txtTenKhoa.TabIndex = 63;
             // 
             // bdsKhoa
             // 
@@ -345,7 +351,7 @@
             // 
             this.txtDiaChiSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "DIACHI", true));
             this.txtDiaChiSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChiSV.Location = new System.Drawing.Point(169, 173);
+            this.txtDiaChiSV.Location = new System.Drawing.Point(169, 146);
             this.txtDiaChiSV.Name = "txtDiaChiSV";
             this.txtDiaChiSV.Size = new System.Drawing.Size(483, 22);
             this.txtDiaChiSV.TabIndex = 60;
@@ -354,7 +360,7 @@
             // 
             this.dateNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSV, "NGAYSINH", true));
             this.dateNgaySinh.EditValue = null;
-            this.dateNgaySinh.Location = new System.Drawing.Point(468, 75);
+            this.dateNgaySinh.Location = new System.Drawing.Point(468, 48);
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgaySinh.Properties.Appearance.Options.UseFont = true;
@@ -369,7 +375,7 @@
             // 
             this.txtTenSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "TEN", true));
             this.txtTenSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSV.Location = new System.Drawing.Point(468, 118);
+            this.txtTenSV.Location = new System.Drawing.Point(468, 91);
             this.txtTenSV.Name = "txtTenSV";
             this.txtTenSV.Size = new System.Drawing.Size(184, 22);
             this.txtTenSV.TabIndex = 56;
@@ -378,7 +384,7 @@
             // 
             this.txtHoSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "HO", true));
             this.txtHoSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoSV.Location = new System.Drawing.Point(169, 118);
+            this.txtHoSV.Location = new System.Drawing.Point(169, 91);
             this.txtHoSV.Name = "txtHoSV";
             this.txtHoSV.Size = new System.Drawing.Size(180, 22);
             this.txtHoSV.TabIndex = 54;
@@ -387,7 +393,7 @@
             // 
             this.txtMaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "MASV", true));
             this.txtMaSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSV.Location = new System.Drawing.Point(169, 75);
+            this.txtMaSV.Location = new System.Drawing.Point(169, 48);
             this.txtMaSV.Name = "txtMaSV";
             this.txtMaSV.Size = new System.Drawing.Size(119, 22);
             this.txtMaSV.TabIndex = 52;
@@ -569,6 +575,7 @@
             this.btnReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.Image")));
             this.btnReload.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.LargeImage")));
             this.btnReload.Name = "btnReload";
+            this.btnReload.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReload_ItemClick);
             // 
             // btnDSSV
             // 
@@ -585,6 +592,7 @@
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // bar2
             // 
@@ -641,6 +649,27 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 816);
             // 
+            // mALOPLabel
+            // 
+            mALOPLabel.AutoSize = true;
+            mALOPLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mALOPLabel.Location = new System.Drawing.Point(68, 203);
+            mALOPLabel.Name = "mALOPLabel";
+            mALOPLabel.Size = new System.Drawing.Size(48, 15);
+            mALOPLabel.TabIndex = 64;
+            mALOPLabel.Text = "Mã lớp:";
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "MALOP", true));
+            this.txtMaLop.Location = new System.Drawing.Point(169, 200);
+            this.txtMaLop.MenuManager = this.barManager1;
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Properties.Appearance.Options.UseFont = true;
+            this.txtMaLop.Size = new System.Drawing.Size(180, 22);
+            this.txtMaLop.TabIndex = 65;
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -672,8 +701,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tENLOPTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tENKHTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKhoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
@@ -681,6 +710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsGVDK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsBangDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,8 +747,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.BindingSource bdsKhoa;
         private DSTableAdapters.KHOATableAdapter KHOATableAdapter;
-        private DevExpress.XtraEditors.TextEdit tENLOPTextEdit;
-        private DevExpress.XtraEditors.TextEdit tENKHTextEdit;
+        private DevExpress.XtraEditors.TextEdit txtTenLop;
+        private DevExpress.XtraEditors.TextEdit txtTenKhoa;
         private System.Windows.Forms.BindingSource bdsGVDK;
         private DSTableAdapters.GIAOVIEN_DANGKYTableAdapter GIAOVIEN_DANGKYTableAdapter;
         private System.Windows.Forms.BindingSource bdsBangDiem;
@@ -739,5 +769,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.TextEdit txtMaLop;
     }
 }
