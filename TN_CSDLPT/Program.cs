@@ -12,7 +12,7 @@ namespace TN_CSDLPT
 {
     static class Program
     {
-        /// <summary>
+        /// <summary> tết
         /// The main entry point for the application.
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
