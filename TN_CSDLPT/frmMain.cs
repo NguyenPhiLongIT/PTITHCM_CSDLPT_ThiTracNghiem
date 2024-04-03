@@ -68,14 +68,6 @@ namespace TN_CSDLPT
                 f.MdiParent = this;
                 f.Show();
             }
-            //Form frm = this.CheckExists(typeof(test));
-            //if (frm != null) frm.Activate();
-            //else
-            //{
-            //    test f = new test();
-            //    f.MdiParent = this;
-            //    f.Show();
-            //}
         }
 
         private void btnKhoaLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -85,6 +77,18 @@ namespace TN_CSDLPT
             else
             {
                 frmKhoa f = new frmKhoa();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnNhapDe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmNhapDe));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmNhapDe f = new frmNhapDe();
                 f.MdiParent = this;
                 f.Show();
             }

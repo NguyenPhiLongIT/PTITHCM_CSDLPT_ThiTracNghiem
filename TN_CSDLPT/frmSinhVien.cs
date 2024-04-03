@@ -47,14 +47,14 @@ namespace TN_CSDLPT
             this.GIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
             this.GIAOVIEN_DANGKYTableAdapter.Fill(this.DS.GIAOVIEN_DANGKY);
 
-            this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
-            this.KHOATableAdapter.Fill(this.DS.KHOA);
-
             this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.SINHVIENTableAdapter.Fill(this.DS.SINHVIEN);
 
             this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.LOPTableAdapter.Fill(this.DS.LOP);
+
+            this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
+            this.KHOATableAdapter.Fill(this.DS.KHOA);
 
             //CO SO & GIANGVIEN co the xem - xoa - sua du lieu nhung khong the chuyen sang chi nhanh khac
             if (Program.mGroup == "COSO" || Program.mGroup == "GIANGVIEN")
@@ -89,7 +89,7 @@ namespace TN_CSDLPT
             {
                 Program.mLogin = Program.remoteLogin;
                 Program.password = Program.remoteLoginPassword;
-                Program.mCoso = cmbCoSo.SelectedIndex;
+                //Program.mCoso = cmbCoSo.SelectedIndex;
 
             }
             else
@@ -105,9 +105,6 @@ namespace TN_CSDLPT
 
                 this.GIAOVIEN_DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.GIAOVIEN_DANGKYTableAdapter.Fill(this.DS.GIAOVIEN_DANGKY);
-
-                this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
-                this.KHOATableAdapter.Fill(this.DS.KHOA);
 
                 this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.SINHVIENTableAdapter.Fill(this.DS.SINHVIEN);
@@ -330,6 +327,7 @@ namespace TN_CSDLPT
 
                 this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.LOPTableAdapter.Fill(this.DS.LOP);
+
             }
             catch (Exception ex)
             {
@@ -358,6 +356,12 @@ namespace TN_CSDLPT
             }
 
             this.Close();
+        }
+
+        private void dgvSV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            
         }
     }
 }

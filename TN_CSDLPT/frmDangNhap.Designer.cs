@@ -41,6 +41,7 @@
             this.rbSinhVien = new System.Windows.Forms.RadioButton();
             this.cbHienMK = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbNhoTK = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             this.edtMatKhau.Name = "edtMatKhau";
             this.edtMatKhau.Size = new System.Drawing.Size(325, 22);
             this.edtMatKhau.TabIndex = 25;
+            this.edtMatKhau.Text = "sa";
             this.edtMatKhau.UseSystemPasswordChar = true;
             // 
             // edtTenDangNhap
@@ -82,6 +84,8 @@
             this.edtTenDangNhap.Name = "edtTenDangNhap";
             this.edtTenDangNhap.Size = new System.Drawing.Size(325, 22);
             this.edtTenDangNhap.TabIndex = 24;
+            this.edtTenDangNhap.Text = "kdt";
+            this.edtTenDangNhap.TextChanged += new System.EventHandler(this.edtTenDangNhap_TextChanged);
             // 
             // cmbCoSo
             // 
@@ -162,7 +166,7 @@
             // cbHienMK
             // 
             this.cbHienMK.AutoSize = true;
-            this.cbHienMK.Location = new System.Drawing.Point(667, 344);
+            this.cbHienMK.Location = new System.Drawing.Point(667, 345);
             this.cbHienMK.Margin = new System.Windows.Forms.Padding(2);
             this.cbHienMK.Name = "cbHienMK";
             this.cbHienMK.Size = new System.Drawing.Size(75, 19);
@@ -184,11 +188,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHỨC VỤ";
             // 
+            // cbNhoTK
+            // 
+            this.cbNhoTK.AutoSize = true;
+            this.cbNhoTK.Location = new System.Drawing.Point(762, 345);
+            this.cbNhoTK.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNhoTK.Name = "cbNhoTK";
+            this.cbNhoTK.Size = new System.Drawing.Size(69, 19);
+            this.cbNhoTK.TabIndex = 30;
+            this.cbNhoTK.Text = "Nhớ TK";
+            this.cbNhoTK.UseVisualStyleBackColor = true;
+            this.cbNhoTK.CheckedChanged += new System.EventHandler(this.cbNhoTK_CheckedChanged);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 503);
+            this.Controls.Add(this.cbNhoTK);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.edtMatKhau);
@@ -227,5 +244,6 @@
         public System.Windows.Forms.RadioButton rbSinhVien;
         private System.Windows.Forms.CheckBox cbHienMK;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbNhoTK;
     }
 }

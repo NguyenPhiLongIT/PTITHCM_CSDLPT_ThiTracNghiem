@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace TN_CSDLPT
 {
@@ -162,6 +163,29 @@ namespace TN_CSDLPT
                 edtMatKhau.UseSystemPasswordChar = true;
                 cbHienMK.Text = "Hiện MK";
             }
+        }
+
+        private void cbNhoTK_CheckedChanged(object sender, EventArgs e)
+        {
+            //if (cbNhoTK.Checked)
+            //{
+            //    edtTenDangNhap.AutoCompleteCustomSource = sourceName;
+            //    edtTenDangNhap.AutoCompleteMode = AutoCompleteMode.Suggest;
+            //    edtTenDangNhap.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            //    edtMatKhau.AutoCompleteCustomSource = sourceName;
+            //    edtMatKhau.AutoCompleteMode = AutoCompleteMode.Suggest;
+            //    edtMatKhau.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //}
+            //else
+            //{
+            //    edtMatKhau.UseSystemPasswordChar = false;
+            //}
+        }
+
+        private void edtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

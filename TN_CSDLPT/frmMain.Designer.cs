@@ -157,6 +157,7 @@
             this.btnNhapDe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapDe.ImageOptions.Image")));
             this.btnNhapDe.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhapDe.ImageOptions.LargeImage")));
             this.btnNhapDe.Name = "btnNhapDe";
+            this.btnNhapDe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhapDe_ItemClick);
             // 
             // btnChuanBiThi
             // 

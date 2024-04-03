@@ -77,7 +77,6 @@ namespace TN_CSDLPT
                 return;
 
             Program.serverName = cmbCoSo.SelectedValue.ToString();
-            Console.WriteLine(Program.mCoso);
 
             if (cmbCoSo.SelectedIndex != Program.mCoso)
             {
@@ -110,9 +109,6 @@ namespace TN_CSDLPT
 
                 this.KHOATableAdapter.Connection.ConnectionString = Program.connstr;
                 this.KHOATableAdapter.Fill(this.DS.KHOA);
-
-                //this.dSKHOATableAdapter.Connection.ConnectionString = Program.connstr;
-                //this.dSKHOATableAdapter.Fill(this.DS.DSKHOA);
 
 
                 macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
