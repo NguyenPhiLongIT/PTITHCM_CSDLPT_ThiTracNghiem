@@ -57,6 +57,13 @@ namespace TN_CSDLPT
             {
                 cmbCoSo.Enabled = true; //Bat tat cho phep chuyen co so
                 btnThem.Enabled = btnXoa.Enabled = btnHieuChinh.Enabled = btnGhi.Enabled = btnPhucHoi.Enabled = false;
+
+                // Deny edit for role TRUONG for form GiaoVien
+                hOTextBox.ReadOnly = true;
+                tENTextBox.ReadOnly = true;
+                dIACHITextBox.ReadOnly = true;
+                txtMAKH.ReadOnly = true;
+                cmbDSKhoa.Enabled = false;
             }
             else
             {
@@ -117,15 +124,6 @@ namespace TN_CSDLPT
 
                 macs = ((DataRowView)bdsKhoa[0])["MACS"].ToString();
             }
-        }
-
-        private void cmbDSKhoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txtMAKH.Text = cmbDSKhoa.SelectedValue.ToString();
-            }
-            catch (Exception ex) { }
         }
     }
 }
